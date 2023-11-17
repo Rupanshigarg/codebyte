@@ -116,7 +116,7 @@ function Profile() {
             <div>
               <h3 className='username'>{user.username}</h3>
               <h5>{user.email}</h5>
-              <h4><img src={clock} />Joined November 2022</h4>
+              <h4><img src={clock} />Joined November 2023</h4>
               <h4><img src={follow} />{userData ? userData.following.length : 0} Following / {userData ? userData.followers.length : 0} Followers</h4>
               <h1></h1>
               <br />
@@ -145,7 +145,7 @@ function Profile() {
               </div>
             </div>
             <div className="boxes">
-              <img src={league} alt="" />
+           <img src="https://d35aaqx5ub95lt.cloudfront.net/images/leagues/74d6ab6e5b6f92e7d16a4a6664d1fafd.svg" alt="" /> 
               <div>
                 <h3>Ruby</h3>
                 <h3 className='second'>Current League</h3>

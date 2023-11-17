@@ -1,5 +1,5 @@
-// export const host="http://localhost:5000";
-export const host="https://server-codebyte.vercel.app";
+export const host="http://localhost:5000";
+// export const host="https://server-codebyte.vercel.app";
 
 // user routes
 
