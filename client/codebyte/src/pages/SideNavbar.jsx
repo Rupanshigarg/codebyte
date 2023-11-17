@@ -64,7 +64,7 @@ function SideNavbar() {
                 setMoreHovered(true);
             }}>
             <ul>
-              <li className='li'><img src={gitlogo} alt="gitlogo" /><span>Github</span></li>
+              <li className='li'><img src={gitlogo} alt="gitlogo" /><span><a href='https://github.com/vedantgore1331/CodeByte'>Github</a></span></li>
               <li><a href='mailto:vedantgore96@gmail.com?bcc=lci2022056@iiitl.ac.in&subject=Can+you+help+me+about+CodeByte'>help</a></li>
               <li onClick={() => {
                 localStorage.removeItem('codebyte-user');
