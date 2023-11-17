@@ -81,7 +81,7 @@ function SideNavbar() {
             }}>
             <ul>
               <li onClick={()=>{handleParentClick2()}} className='li'><img src={gitlogo} alt="gitlogo" /><span><a href='https://github.com/vedantgore1331/CodeByte' ref={childRef2}>Github</a></span></li>
-              <li onClick={()=>{handleParentClick()}}><a ref={childRef} href='mailto:vedantgore96@gmail.com?bcc=lci2022056@iiitl.ac.in&subject=Can+you+help+me+about+CodeByte'>help</a></li>
+              <li onClick={()=>{handleParentClick()}}><a ref={childRef} href='mailto:vedantgore96@gmail.com?bcc=lci2022056@iiitl.ac.in&subject=Can+you+help+me+at+CodeByte'>help</a></li>
               <li onClick={() => {
                 localStorage.removeItem('codebyte-user');
                 localStorage.removeItem('course');
