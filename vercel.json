@@ -1,11 +1,8 @@
 {
     "version": 2,
     "builds": [
-      { "src": "client/codebyte", "use": "@vercel/node" },
+      { "src": "client/codebyte", "use": "@vercel/node", "config": {"buildCommand": "npm install --legacy-peer-deps" } },
       { "src": "server", "use": "@vercel/node", "config": { "maxLambdaSize": "1024mb", "buildCommand": "npm install" } }
-    ],
-    "settings": {
-      "postinstall": "npm install --legacy-peer-deps"
-    }
+    ]
   }
   
