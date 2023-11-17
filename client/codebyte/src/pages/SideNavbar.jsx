@@ -8,12 +8,28 @@ import user from '../assets/images/icons8-user-male-1001.png'
 import more from '../assets/images/icons8-more-64.png'
 import logo from '../assets/images/icons8-module-481.png'
 import gitlogo from '../assets/images/github-logo.png'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function SideNavbar() {
   const location = useLocation();
   const [moreHovered, setMoreHovered] = useState(false);
   const navigate=useNavigate();
+  const childRef = useRef(null);
+  const childRef2 = useRef(null);
+  
+  const handleParentClick = () => {
+    // Trigger a click on the child element
+    if (childRef.current) {
+      childRef.current.click();
+    }
+  };
+
+  const handleParentClick2 = () => {
+    // Trigger a click on the child element
+    if (childRef2.current) {
+      childRef2.current.click();
+    }
+  };
 
   const menuItems = [
     { to: '/fake', label: 'learn', imgSrc: learn },
@@ -64,8 +80,8 @@ function SideNavbar() {
                 setMoreHovered(true);
             }}>
             <ul>
-              <li className='li'><img src={gitlogo} alt="gitlogo" /><span><a href='https://github.com/vedantgore1331/CodeByte'>Github</a></span></li>
-              <li><a href='mailto:vedantgore96@gmail.com?bcc=lci2022056@iiitl.ac.in&subject=Can+you+help+me+about+CodeByte'>help</a></li>
+              <li onClick={()=>{handleParentClick2()}} className='li'><img src={gitlogo} alt="gitlogo" /><span><a href='https://github.com/vedantgore1331/CodeByte' ref={childRef2}>Github</a></span></li>
+              <li onClick={()=>{handleParentClick()}}><a ref={childRef} href='mailto:vedantgore96@gmail.com?bcc=lci2022056@iiitl.ac.in&subject=Can+you+help+me+about+CodeByte'>help</a></li>
               <li onClick={() => {
                 localStorage.removeItem('codebyte-user');
                 localStorage.removeItem('course');
