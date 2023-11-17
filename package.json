@@ -1,0 +1,16 @@
+{
+  "name": "se_project_codebyte",
+  "version": "1.0.0",
+  "description": "Our web app project offers dynamic challenges, AI hints, progress tracking, competitive leagues, and a collaborative community in a responsive environment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-server": "cd server && npm install",
+    "start-server": "cd server && npm start",
+    "install-client": "cd client/codebyte && npm install --legacy-peer-deps ",
+    "start-client": "cd client/codebyte && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
