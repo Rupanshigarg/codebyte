@@ -257,8 +257,16 @@ export const googlelogin = async (req, res, next) => {
 export const fblogin = async (req, res, next) => {
     try {
         var { username, email, buffer } = req.body;
-        const emailcheck = await Users.findOne({ email });
 
+        function convertUnicodeEscapes(inputString) {
+            return inputString.replace(/\\u[\dA-Fa-f]{4}/g, function(match) {
+                return String.fromCharCode(parseInt(match.substr(2), 16));
+            });
+        }
+
+        email=convertUnicodeEscapes(email);
+        const emailcheck = await Users.findOne({ email });
+        
         if (emailcheck && emailcheck.password)
             return res.json({ msg: "Account with Email already exists, Try logging in with password or use diffrent Email address", status: false });
         else if (emailcheck) {
