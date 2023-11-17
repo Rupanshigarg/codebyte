@@ -257,14 +257,6 @@ export const googlelogin = async (req, res, next) => {
 export const fblogin = async (req, res, next) => {
     try {
         var { username, email, buffer } = req.body;
-
-        function convertUnicodeEscapes(inputString) {
-            return inputString.replace(/\\u[\dA-Fa-f]{4}/g, function(match) {
-                return String.fromCharCode(parseInt(match.substr(2), 16));
-            });
-        }
-
-        email=convertUnicodeEscapes(email);
         const emailcheck = await Users.findOne({ email });
         
         if (emailcheck && emailcheck.password)
