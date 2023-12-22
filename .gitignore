@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 /client/codebyte/node_modules
+/client/codebyte/public/SRS.pdf
 /server/node_modules
 /server/.env
 /client/codebyte/.env
